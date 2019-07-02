@@ -3,13 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="2d7089f7-d6e5-4a07-8468-b91034c6490b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WindFarmDemoWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WindFarmDemoWeb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/client/WindFarmRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/client/WindFarmRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/resources/PersonsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/resources/PersonsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sk/fri/uniza/views/menu_items.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sk/fri/uniza/views/menu_items.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,6 +42,15 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sk.fri.uniza.views" />
+      <recent name="sk.fri.uniza.api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/sk/fri/uniza/views" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -58,6 +76,10 @@
       <updated>1561221818392</updated>
       <workItem from="1561221820203" duration="276000" />
       <workItem from="1561223163537" duration="1736000" />
+      <workItem from="1561234551551" duration="44000" />
+      <workItem from="1562079187752" duration="7679000" />
+      <workItem from="1562087277113" duration="14000" />
+      <workItem from="1562087429390" duration="221000" />
     </task>
     <servers />
   </component>

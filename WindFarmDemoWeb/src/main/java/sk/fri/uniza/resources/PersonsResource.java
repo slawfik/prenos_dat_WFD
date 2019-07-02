@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import retrofit2.Response;
 import sk.fri.uniza.WindFarmDemoApplication;
+import sk.fri.uniza.api.LiteWeatherOBJ;
 import sk.fri.uniza.api.Paged;
 import sk.fri.uniza.api.Person;
 import sk.fri.uniza.api.PersonBuilder;
@@ -17,6 +18,7 @@ import sk.fri.uniza.core.User;
 import sk.fri.uniza.views.NewPersonView;
 import sk.fri.uniza.views.PersonView;
 import sk.fri.uniza.views.PersonsView;
+import sk.fri.uniza.views.WeatherView;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
@@ -86,6 +88,30 @@ public class PersonsResource {
             if (personResponse.isSuccessful()) {
                 Person personLoggedIn = personResponse.body();
                 return new PersonView(uriInfo, user, personLoggedIn, null);
+            }
+            throw new WebApplicationException(personResponse.code());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new WebApplicationException(e);
+        }
+
+    }
+
+    @GET
+    @Path("weather")
+    @Produces(MediaType.TEXT_HTML)
+    @RolesAllowed({Role.USER_READ_ONLY, Role.ADMIN})
+    public WeatherView getWeather(@Auth User user, @Context UriInfo uriInfo, @Context HttpHeaders headers) {
+
+        Session session = sessionDao.getSession(headers);
+
+        Response<LiteWeatherOBJ> personResponse;
+        try {
+
+            personResponse = WindFarmDemoApplication.getWindFarmServis().getWeather(session.getBearerToken()).execute();
+            if (personResponse.isSuccessful()) {
+                LiteWeatherOBJ pocasie = personResponse.body();
+                return new WeatherView(uriInfo, user, pocasie, null);
             }
             throw new WebApplicationException(personResponse.code());
         } catch (IOException e) {

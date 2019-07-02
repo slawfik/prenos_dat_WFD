@@ -12,6 +12,7 @@
 {"title":"Login","url":"login"},
 {"subheader":"Info","divider":"true"},
 {"title":"User info","icon":"person","url":"persons/user-info"},
+{"title":"Počasie","icon":"person","url":"persons/weather"},
 {"title":"Nový užívateľ","icon":"person_add","url":"persons/new-user","roles":["ADMIN"]},
 {"title":"Zoznam užívateľov","icon":"group","url":"persons","roles":["ADMIN"]},
 

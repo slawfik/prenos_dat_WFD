@@ -3,10 +3,7 @@ package sk.fri.uniza.client;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.*;
-import sk.fri.uniza.api.AccessToken;
-import sk.fri.uniza.api.Paged;
-import sk.fri.uniza.api.Person;
-import sk.fri.uniza.api.PublicKey;
+import sk.fri.uniza.api.*;
 
 import java.util.List;
 import java.util.Map;
@@ -29,6 +26,9 @@ public interface WindFarmRequest {
 
     @GET("/api/persons/{id}")
     Call<Person> getPerson(@Header("Authorization") String authorization, @Path("id") Long id);
+
+    @GET("/api/authDevice/getWeather")
+    Call<LiteWeatherOBJ> getWeather(@Header("Authorization") String authorization);
 
     @GET("/api/persons")
     Call<Paged<List<Person>>> getPagedPersons(@Header("Authorization") String authorization, @Query("limit") Integer limit, @Query("page") Integer page);
