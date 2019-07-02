@@ -1,7 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="622cbf05-95fa-467b-93f3-b78c5b420828" name="Default Changelist" comment="" />
+    <list default="true" id="622cbf05-95fa-467b-93f3-b78c5b420828" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Retrof_client_server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/WindFarmDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/WindFarmDemo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/dependency-reduced-pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/WindFarmDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/WindFarmDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/api/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/api/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/auth/BasicDev_Authentificator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/auth/BasicDev_Authentificator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/auth/OAuth2Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/auth/OAuth2Authenticator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/DevicesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/DevicesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/UsersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/resources/Dev_Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/resources/Dev_Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/api/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/api/Device.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/api/Device_.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/api/Device_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/auth/BasicDev_Authentificator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/auth/BasicDev_Authentificator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/auth/OAuth2Authenticator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/auth/OAuth2Authenticator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/db/DevicesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/db/DevicesDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/db/UsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/db/UsersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/resources/Dev_Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/resources/Dev_Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/generated-sources/annotations/sk/fri/uniza/api/Device_.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/generated-sources/annotations/sk/fri/uniza/api/Device_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/maven-status/maven-compiler-plugin/compile/default-cli/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/maven-status/maven-compiler-plugin/compile/default-cli/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Api/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Api/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/openweathermap/Retrof_client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Retrof_client_weather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/skunizaWFD_dev.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/Api/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/Api/Device.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/Resource/Dev_Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/Resource/Dev_Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/openweathermap/Retrof_client.class" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +60,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -24,7 +71,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1MuelKht4fl0R0psWLJEaZrtoWI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -37,6 +86,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sk.uniza.WFD_dev.Api" />
       <recent name="sk.uniza.WFD_dev.Resource" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -59,7 +109,7 @@
   <component name="RunManager">
     <configuration name="device" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sk.uniza.WFD_dev.App" />
-      <module name="skunizaWFD_dev" />
+      <module name="sk.uniza.WFD_dev" />
       <option name="PROGRAM_PARAMETERS" value="server config.yml" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -78,10 +128,62 @@
       <updated>1561039058435</updated>
       <workItem from="1561039062788" duration="19934000" />
       <workItem from="1561201368427" duration="79000" />
+      <workItem from="1561317083532" duration="288000" />
+      <workItem from="1561385404799" duration="10707000" />
+      <workItem from="1561399307300" duration="1097000" />
+      <workItem from="1561442328471" duration="4544000" />
+      <workItem from="1561493547525" duration="396000" />
+      <workItem from="1561496844215" duration="639000" />
+      <workItem from="1561539080701" duration="37000" />
+      <workItem from="1561627313152" duration="3619000" />
+      <workItem from="1561634456436" duration="863000" />
+      <workItem from="1561638877453" duration="1679000" />
+      <workItem from="1561659019824" duration="3580000" />
+      <workItem from="1561835258026" duration="14247000" />
+      <workItem from="1562074354891" duration="603000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -57,14 +57,6 @@ public class UsersDao extends AbstractDAO<User> implements BasicDao<User, Long> 
         userDB.add(user2);
     }
 
-    public void writeTomasUser()   {
-        User tomas = new User();
-        tomas.setUserName("tomas@slavkovsky.net");
-        tomas.setRoles(Set.of(Role.ADMIN));
-        tomas.setNewPassword("tomas123");
-        save(tomas);
-    }
-
     private UsersDao(SessionFactory sessionFactory) {
         super(sessionFactory);
     }

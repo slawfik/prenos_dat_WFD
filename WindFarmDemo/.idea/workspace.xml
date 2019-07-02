@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="479989db-ba49-49e0-aebf-769c56430bf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WindFarmDemo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WindFarmDemo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/WindFarmDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/WindFarmDemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/OAuth2Authenticator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/OAuth2Authenticator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/core/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/core/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/db/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/fri/uniza/db/UsersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Retrof_client_server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Api/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Api/Device.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/openweathermap/Retrof_client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Retrof_client_weather.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/META-INF/skunizaWFD_dev.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Api/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Api/Device.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Resource/Dev_Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Resource/Dev_Resource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/openweathermap/Retrof_client.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +22,39 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MariaDB - windfarmdemoDB@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -26,11 +64,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1N08zBXOvfK6DzVeibfAgzFxEXV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/sk/fri/uniza" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,6 +84,7 @@
       <recent name="sk.fri.uniza.api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/sk/fri/uniza" />
       <recent name="$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth" />
     </key>
   </component>
@@ -71,6 +111,21 @@
       <option name="presentableId" value="Default" />
       <updated>1561206914001</updated>
       <workItem from="1561206919658" duration="12610000" />
+      <workItem from="1561234598887" duration="5021000" />
+      <workItem from="1561313658879" duration="2624000" />
+      <workItem from="1561317593833" duration="1217000" />
+      <workItem from="1561366971545" duration="2861000" />
+      <workItem from="1561385023263" duration="11140000" />
+      <workItem from="1561399295865" duration="1111000" />
+      <workItem from="1561442073155" duration="5755000" />
+      <workItem from="1561492821634" duration="5580000" />
+      <workItem from="1561538757379" duration="4795000" />
+      <workItem from="1561622580850" duration="3397000" />
+      <workItem from="1561629302455" duration="4787000" />
+      <workItem from="1561635983212" duration="5648000" />
+      <workItem from="1561660598221" duration="2781000" />
+      <workItem from="1561835505673" duration="11916000" />
+      <workItem from="1562074325520" duration="645000" />
     </task>
     <servers />
   </component>
@@ -82,10 +137,53 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/BasicDev_Authentificator.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/BasicDev_Authorizer.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/BasicDev_Authentificator.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/BasicDev_Authentificator.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/api/Client_data_thread.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/api/Client_data_thread.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="dev" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

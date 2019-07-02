@@ -39,13 +39,6 @@ public class OAuth2Authenticator implements Authenticator<String, User> {
         UsersDao.getUserDB().forEach(usersDao::save);
     }
 
-    @UnitOfWork
-    public void generateDevices(DevicesDao dev) {
-        for(Integer i = 1; i<dev.getArrayL_Devices().size();i++)    {
-            dev.save(dev.getDeviceFromLocalDB_WithID(i));
-        }
-    }
-
     @Override
     public Optional<User> authenticate(String jwtToken) throws AuthenticationException {
         Claims claimsJws;

@@ -16,12 +16,19 @@ public class DevicesDao extends AbstractDAO<Device> implements BasicDao<Device, 
     private static DevicesDao dev_dao;
     public static HashMap<Integer, Device> devicesHashMap = new HashMap<>();
 
+    public static DevicesDao createDevDao(SessionFactory sessionFactory) {
+        if (dev_dao == null)
+            dev_dao = new DevicesDao(sessionFactory);
+        return dev_dao;
+    }
+
+    public DevicesDao(SessionFactory sessionFactory) {
+        super(sessionFactory);
+    }
+
     //########START_LOCAL_DATABASE###########
     static{
-        devicesHashMap.put(1, new Device("RaspberryPI3","Kuchyna", "device123"));
-        devicesHashMap.put(2, new Device( "ard","Obývacka","device123"));
-        devicesHashMap.put(3, new Device("BeagleBone","Spálňa","device123"));
-        devicesHashMap.put(4, new Device("Tomas","kuchyna","device123"));
+        devicesHashMap.put(1, new Device("Tomas","Poprad","device123","localhost:8090/"));
     }
 
     public List<Device> getArrayL_Devices(){
@@ -42,23 +49,13 @@ public class DevicesDao extends AbstractDAO<Device> implements BasicDao<Device, 
 
     //########END_LOCAL_DATABASE###########
 
-    public static DevicesDao createDevDao(SessionFactory sessionFactory) {
-        if (dev_dao == null)
-            dev_dao = new DevicesDao(sessionFactory);
-        return dev_dao;
-    }
-
-    public DevicesDao(SessionFactory sessionFactory) {
-        super(sessionFactory);
-    }
-
     @Override
     public List<Device> getAll() {
         List<Device> list = super.currentSession().createQuery("from Device ").list();
         return list;
     }
 
-    public Device findDeviceWithName(String pa_name) {
+    public Device findDeviceWithName_DB(String pa_name) {
         Query query = super.currentSession().getSession().createQuery("from Device where D_name = :name ");
         query.setString("name", pa_name);
 
@@ -72,7 +69,7 @@ public class DevicesDao extends AbstractDAO<Device> implements BasicDao<Device, 
         return Optional.ofNullable(get(id));
     }
 
-    public Device getDeviceFromDB(Integer ID)    {
+    public Device getDeviceWithId_DB(Integer ID)    {
         Query query = super.currentSession().getSession().createQuery("from Device where id = :id ");
         query.setInteger("id", ID);
 

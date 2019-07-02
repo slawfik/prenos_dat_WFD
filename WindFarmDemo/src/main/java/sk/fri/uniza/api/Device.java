@@ -24,29 +24,30 @@ public class Device implements Principal {
     private static Random rand = new Random((new Date()).getTime());
     private String nname;
     private String location;
-    private byte[] secret;
+    private String secret;
     private String role;
+    private String baseUrl;
+
     private Long id;
-    private byte[] salt;
+    //private byte[] salt;
 
     public Device()    {}
 
-    public Device(String nname, String location, String password)    {
+    public Device(String nname, String location, String password,String baseUrl)    {
         this.nname = nname;
         this.location = location;
-        if (password != null)   {
-            this.secret = generateHashSecrete(password);
-        }
+        this.baseUrl = baseUrl;
+        /*if (password != null)   {
+            genSalt();
+            this.secret = s_generateHashSecrete(getSalt(),password);
+        }*/
+        secret = password;
         role = "default";
     }
 
     public Device(String name, String roles) {
         this.nname = name;
         this.role = roles;
-    }
-
-    public byte[] getSecret(String password)    {
-        return generateHashSecrete(password);
     }
 
     public static byte[] s_generateHashSecrete(byte[] salt ,String password) {
@@ -60,38 +61,49 @@ public class Device implements Principal {
         return md.digest(ArrayUtils.addAll(salt, password.getBytes()));
     }
 
-    public byte[] generateHashSecrete(String password) {
-        getSalt();
-        MessageDigest md = null;
-        try {
-            md = MessageDigest.getInstance("MD5");
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return null;
-        }
-        return md.digest(ArrayUtils.addAll(salt, password.getBytes()));
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
-    public void getSalt()     {
+    @Column(name="D_BaseUrl")
+    public String getBaseUrl() {
+        return baseUrl;
+    }
+
+    /*  public boolean isCorrectPass(String password)   {
+        byte[] new_secret = s_generateHashSecrete(salt,password);
+        return new_secret.equals(secret);
+    }*/
+
+    /*public void genSalt()     {
         salt = new byte[8];
         rand.nextBytes(salt);
     }
 
+    public byte[] getSalt()     {
+        return salt;
+    }
+*/
     @Column(name="D_Roles")
     public String getRole()    {
         return role;
     }
 
     @Column(name="D_secrete")
-    public byte[] getSecret() {
+    public String getSecret() {
         return secret;
     }
+
+/*    @Column(name="D_salt")
+    public void setSalt(byte[] salt) {
+        this.salt = salt;
+    }*/
 
     public void setRole(String role) {
         this.role = role;
     }
 
-    public void setSecret(byte[] secret) {
+    public void setSecret(String secret) {
         this.secret = secret;
     }
 

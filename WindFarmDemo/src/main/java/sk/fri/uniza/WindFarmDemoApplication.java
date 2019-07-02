@@ -20,8 +20,10 @@ import io.dropwizard.views.ViewBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import jersey.repackaged.com.google.common.collect.Lists;
+import org.apache.http.auth.Credentials;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 import org.hibernate.SessionFactory;
+import sk.fri.uniza.api.Client_data_thread;
 import sk.fri.uniza.api.Device;
 import sk.fri.uniza.api.Person;
 import sk.fri.uniza.api.Phone;
@@ -29,6 +31,7 @@ import sk.fri.uniza.auth.*;
 import sk.fri.uniza.config.WindFarmDemoConfiguration;
 import sk.fri.uniza.core.User;
 import sk.fri.uniza.db.DevicesDao;
+import sk.fri.uniza.db.LiteWeatherObjDao;
 import sk.fri.uniza.db.PersonDao;
 import sk.fri.uniza.db.UsersDao;
 import sk.fri.uniza.health.TemplateHealthCheck;
@@ -38,11 +41,10 @@ import sk.fri.uniza.views.ErrorView;
 import javax.ws.rs.core.MediaType;
 import java.security.Key;
 import java.security.KeyPair;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class WindFarmDemoApplication extends Application<WindFarmDemoConfiguration> {
+    private List<Client_data_thread> thread= new ArrayList<Client_data_thread>();;
 
     public static void main(final String[] args) throws Exception {
         new WindFarmDemoApplication().run(args);
@@ -121,7 +123,13 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
                 return new ErrorView(errorMessage);
             }
         });
+
+        Client_data_thread aa = new Client_data_thread("http://localhost:8090/");
+        aa.run();
+        //start_receiving_dataFromDevices();
     }
+
+
 
     private void registerUserAuth(WindFarmDemoConfiguration configuration, Environment environment) {
 
@@ -132,15 +140,7 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
         final UsersDao usersDao = UsersDao.createUsersDao(hibernate.getSessionFactory());
         final DevicesDao dev_dao = DevicesDao.createDevDao(hibernate.getSessionFactory());
 
-        // Initialize OAuth 2 authorization mechanism
-        /*OAuth2Authenticator oAuth2Authenticator = new UnitOfWorkAwareProxyFactory(hibernate).create(OAuth2Authenticator.class, new Class[]{UsersDao.class, Key.class}, new Object[]{usersDao, secreteKey.getPublic()});
-        environment.jersey().register(new AuthDynamicFeature(
-                new OAuthCredentialAuthFilter.Builder<User>()
-                        .setAuthenticator(oAuth2Authenticator)
-                        .setAuthorizer(new OAuth2Authorizer())
-                        .setPrefix("Bearer")
-                        .buildAuthFilter()
-        ));*/
+        //initialize oauth2
         OAuth2Authenticator oAuth2Authenticator = new UnitOfWorkAwareProxyFactory(hibernate).create(OAuth2Authenticator.class, new Class[]{UsersDao.class, Key.class}, new Object[]{usersDao, secreteKey.getPublic()});
         AuthFilter oauth_filter = new OAuthCredentialAuthFilter.Builder<User>()
                 .setAuthenticator(oAuth2Authenticator)
@@ -149,10 +149,11 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
                 .buildAuthFilter();
 
         //initialize device basic authentification
+        BasicDev_Authentificator basicAuth= new UnitOfWorkAwareProxyFactory(hibernate).create(BasicDev_Authentificator.class, new Class[]{DevicesDao.class}, new Object[]{dev_dao});
         AuthFilter basicCredentialAuthFilter = new BasicCredentialAuthFilter.Builder<Device>()
-                .setAuthenticator(new BasicDev_Authentificator(dev_dao))
+                .setAuthenticator(basicAuth)
                 .setAuthorizer(new BasicDev_Authorizer())
-                .setPrefix("Basic")
+                .setRealm("SUPER SECRET STUFF")
                 .buildAuthFilter();
 
         List<AuthFilter> filters = Lists.newArrayList(basicCredentialAuthFilter, oauth_filter);
@@ -160,7 +161,7 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
 
         // Generate fake users & devices
         oAuth2Authenticator.generateUsers();
-        oAuth2Authenticator.generateDevices(dev_dao);
+        basicAuth.generateDevices();
 
         // Enable the resource protection annotations: @RolesAllowed, @PermitAll & @DenyAll
         environment.jersey().register(RolesAllowedDynamicFeature.class);
@@ -173,6 +174,7 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
 
         final HelloWorldResource helloWorldResource = new HelloWorldResource(configuration.getTemplate(), configuration.getDefaultName());
         final DevicesDao dev_dao = DevicesDao.createDevDao(hibernate.getSessionFactory());
+        final LiteWeatherObjDao weather_Dao= LiteWeatherObjDao.createDevDao(hibernate.getSessionFactory());
 
         // Create Dao access objects
         final UsersDao usersDao = UsersDao.createUsersDao(hibernate.getSessionFactory());
@@ -182,13 +184,25 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
         final LoginResource loginResource = new LoginResource(secreteKey, usersDao, OAuth2Clients.getInstance());
         final UsersResource usersResource = new UsersResource(usersDao);
         final PersonResource personResource = new PersonResource(personDao);
-        final Dev_Resource dev_res = new Dev_Resource(dev_dao);
+        final Dev_Resource dev_res = new Dev_Resource(dev_dao,weather_Dao);
 
         environment.jersey().register(helloWorldResource);
         environment.jersey().register(loginResource);
         environment.jersey().register(usersResource);
         environment.jersey().register(personResource);
         environment.jersey().register(dev_res);
+    }
+
+    private void start_receiving_dataFromDevices()  {
+        final DevicesDao dev_dao = DevicesDao.createDevDao(hibernate.getSessionFactory());
+        List<Device> all_dev = dev_dao.getAll();
+        Client_data_thread e;
+
+        for (int i = 1;i<all_dev.size()+1;i++)    {
+            e = new Client_data_thread(all_dev.get(i).getBaseUrl());
+            e.run();
+            thread.add(e);
+        }
     }
 
 }
