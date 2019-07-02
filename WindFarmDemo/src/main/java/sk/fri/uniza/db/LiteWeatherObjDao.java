@@ -3,6 +3,7 @@ package sk.fri.uniza.db;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import sk.fri.uniza.api.Paged;
 import sk.fri.uniza.openweathermap.LiteWeatherOBJ;
 
@@ -16,10 +17,18 @@ public class LiteWeatherObjDao extends AbstractDAO<LiteWeatherOBJ> implements Ba
         super(sessionFactory);
     }
 
-    public static LiteWeatherObjDao createDevDao(SessionFactory sessionFactory) {
+    public static LiteWeatherObjDao createWeatherDao(SessionFactory sessionFactory) {
         if (weather_dao == null)
             weather_dao = new LiteWeatherObjDao(sessionFactory);
         return weather_dao;
+    }
+
+    public LiteWeatherOBJ findDeviceWithName_DB(String pa_name) {
+        Query query = super.currentSession().getSession().createQuery("from LiteWeatherOBJ where name = :name ");
+        query.setString("name", pa_name);
+
+        List<?> list = query.list();
+        return (LiteWeatherOBJ) list.get(0);
     }
 
     @Override
@@ -35,9 +44,9 @@ public class LiteWeatherObjDao extends AbstractDAO<LiteWeatherOBJ> implements Ba
     }
 
     @Override
-    public Long save(LiteWeatherOBJ dev) throws HibernateException {
-        super.persist(dev);
-        return dev.getId();
+    public Long save(LiteWeatherOBJ wet) throws HibernateException {
+        super.persist(wet);
+        return wet.getId();
     }
 
     @Override

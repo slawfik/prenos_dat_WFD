@@ -4,6 +4,7 @@ import org.glassfish.jersey.internal.util.Base64;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
+import sk.uniza.WFD_dev.Api.Client_data_thread;
 import sk.uniza.WFD_dev.Api.Device;
 import sk.uniza.WFD_dev.Resource.Dev_Resource;
 import sk.uniza.WFD_dev.Resource.Retrof_client_server;
@@ -26,12 +27,21 @@ import java.io.IOException;
  *
  */
 
-
 public class App extends Application<Configuration>
 {
     private static Retrof_client_weather retrof_client_Weather;
     private static Retrof_client_server retrof_client_Server;
     private static Device thisDevice;
+
+    public void setThread(Client_data_thread thread) {
+        this.thread = thread;
+    }
+
+    public Client_data_thread getThread() {
+        return thread;
+    }
+
+    private Client_data_thread thread;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
@@ -74,7 +84,8 @@ public class App extends Application<Configuration>
 
         retrof_client_Weather = ret_OWServer.create(Retrof_client_weather.class);
         retrof_client_Server = ret_server.create(Retrof_client_server.class);
-        thisDevice = authentificateThisDevice();
+        setThread(new Client_data_thread(retrof_client_Server));
+        getThread().run();
     }
 
     public Device authentificateThisDevice() {

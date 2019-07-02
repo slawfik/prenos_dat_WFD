@@ -1,10 +1,11 @@
 package sk.fri.uniza.openweathermap;
 
 import javax.persistence.*;
+import java.security.Principal;
 
 @Entity
 @Table(name="Weather_Table")
-public class LiteWeatherOBJ {
+public class LiteWeatherOBJ implements Principal {
     private String name;
     private Double temp;
     private Integer pressure;
@@ -13,6 +14,10 @@ public class LiteWeatherOBJ {
     private Double speed;
 
     private Long id;
+
+    public LiteWeatherOBJ() {
+
+    }
 
     public LiteWeatherOBJ(OpenWeatherOBJ obj)   {
         temp = obj.getMain().getTemp();
@@ -23,14 +28,16 @@ public class LiteWeatherOBJ {
         speed = obj.getWind().getSpeed();
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

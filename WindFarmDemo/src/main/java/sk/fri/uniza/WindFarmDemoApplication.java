@@ -20,10 +20,8 @@ import io.dropwizard.views.ViewBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundle;
 import io.federecio.dropwizard.swagger.SwaggerBundleConfiguration;
 import jersey.repackaged.com.google.common.collect.Lists;
-import org.apache.http.auth.Credentials;
 import org.glassfish.jersey.server.filter.RolesAllowedDynamicFeature;
 import org.hibernate.SessionFactory;
-import sk.fri.uniza.api.Client_data_thread;
 import sk.fri.uniza.api.Device;
 import sk.fri.uniza.api.Person;
 import sk.fri.uniza.api.Phone;
@@ -35,6 +33,7 @@ import sk.fri.uniza.db.LiteWeatherObjDao;
 import sk.fri.uniza.db.PersonDao;
 import sk.fri.uniza.db.UsersDao;
 import sk.fri.uniza.health.TemplateHealthCheck;
+import sk.fri.uniza.openweathermap.LiteWeatherOBJ;
 import sk.fri.uniza.resources.*;
 import sk.fri.uniza.views.ErrorView;
 
@@ -44,7 +43,7 @@ import java.security.KeyPair;
 import java.util.*;
 
 public class WindFarmDemoApplication extends Application<WindFarmDemoConfiguration> {
-    private List<Client_data_thread> thread= new ArrayList<Client_data_thread>();;
+    //private List<Client_data_thread> thread= new ArrayList<Client_data_thread>();
 
     public static void main(final String[] args) throws Exception {
         new WindFarmDemoApplication().run(args);
@@ -60,7 +59,7 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
      * Initialization of Hibernate ORM bundle.
      * Note: Add class that need to be mapped by Hibernate
      */
-    private final HibernateBundle<WindFarmDemoConfiguration> hibernate = new HibernateBundle<WindFarmDemoConfiguration>(User.class, Person.class, Phone.class, Device.class) {
+    private final HibernateBundle<WindFarmDemoConfiguration> hibernate = new HibernateBundle<WindFarmDemoConfiguration>(User.class, Person.class, Phone.class, Device.class, LiteWeatherOBJ.class) {
 
         @Override
         public PooledDataSourceFactory getDataSourceFactory(WindFarmDemoConfiguration windFarmDemoConfiguration) {
@@ -124,8 +123,8 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
             }
         });
 
-        Client_data_thread aa = new Client_data_thread("http://localhost:8090/");
-        aa.run();
+       /* Client_data_thread aa = new Client_data_thread("http://localhost:8090/");
+        aa.run();*/
         //start_receiving_dataFromDevices();
     }
 
@@ -174,7 +173,7 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
 
         final HelloWorldResource helloWorldResource = new HelloWorldResource(configuration.getTemplate(), configuration.getDefaultName());
         final DevicesDao dev_dao = DevicesDao.createDevDao(hibernate.getSessionFactory());
-        final LiteWeatherObjDao weather_Dao= LiteWeatherObjDao.createDevDao(hibernate.getSessionFactory());
+        final LiteWeatherObjDao weather_Dao= LiteWeatherObjDao.createWeatherDao(hibernate.getSessionFactory());
 
         // Create Dao access objects
         final UsersDao usersDao = UsersDao.createUsersDao(hibernate.getSessionFactory());
@@ -191,18 +190,6 @@ public class WindFarmDemoApplication extends Application<WindFarmDemoConfigurati
         environment.jersey().register(usersResource);
         environment.jersey().register(personResource);
         environment.jersey().register(dev_res);
-    }
-
-    private void start_receiving_dataFromDevices()  {
-        final DevicesDao dev_dao = DevicesDao.createDevDao(hibernate.getSessionFactory());
-        List<Device> all_dev = dev_dao.getAll();
-        Client_data_thread e;
-
-        for (int i = 1;i<all_dev.size()+1;i++)    {
-            e = new Client_data_thread(all_dev.get(i).getBaseUrl());
-            e.run();
-            thread.add(e);
-        }
     }
 
 }

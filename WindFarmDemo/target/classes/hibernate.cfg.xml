@@ -25,6 +25,8 @@
     <mapping class="sk.fri.uniza.api.Phone"/>
     <mapping class="sk.fri.uniza.core.User"/>
     <mapping class="sk.fri.uniza.api.Device"/>
+    <mapping class="sk.fri.uniza.openweathermap.LiteWeatherOBJ"/>
+
 
   </session-factory>
 </hibernate-configuration>

@@ -3,7 +3,6 @@ package sk.fri.uniza.resources;
 import io.dropwizard.auth.Auth;
 import io.dropwizard.hibernate.UnitOfWork;
 import retrofit2.http.Body;
-import sk.fri.uniza.WindFarmDemoApplication;
 import sk.fri.uniza.api.Device;
 import sk.fri.uniza.db.DevicesDao;
 import sk.fri.uniza.db.LiteWeatherObjDao;
@@ -16,10 +15,6 @@ import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Path("/authDevice")
 @Produces(MediaType.APPLICATION_JSON)
@@ -66,6 +61,17 @@ public class Dev_Resource {
     }
 
     @GET
+    @Path("/getWeather")
+    @UnitOfWork
+    @Produces(MediaType.APPLICATION_JSON)
+    public LiteWeatherOBJ select() {
+        LiteWeatherOBJ aa = weather_Dao.findDeviceWithName_DB("Poprad");
+        //aa.setName(Device.s_generateHashSecrete(aa.getSalt(),"device123").toString());
+        //aa.setLocation(Device.s_generateHashSecrete(aa.getSalt(),"device123").toString());
+        return aa;
+    }
+
+    @GET
     @Path("/selectDev")
     @UnitOfWork
     @Consumes(MediaType.APPLICATION_JSON)
@@ -78,15 +84,17 @@ public class Dev_Resource {
     }
 
 
+
+
     @POST
     @Path("weather")
     @RolesAllowed( "default" )
-    //@UnitOfWork
+    @UnitOfWork
     @Consumes(MediaType.APPLICATION_JSON)
     public OpenWeatherOBJ newWeather(@Body OpenWeatherOBJ obj)  {
         LiteWeatherOBJ newData = new LiteWeatherOBJ(obj);
+        weather_Dao.save(newData);
         System.out.println("newData"+newData.getName()+" temp:"+newData.getTemp());
-        newData.setName("vrátený!!__!!");
         return obj;
     }
 

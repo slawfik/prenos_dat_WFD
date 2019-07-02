@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="479989db-ba49-49e0-aebf-769c56430bf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Retrof_client_server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Api/Device.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Api/Device.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Dev_Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/openweathermap/Retrof_client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/src/main/java/sk/uniza/WFD_dev/Resource/Retrof_client_weather.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/META-INF/skunizaWFD_dev.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Api/Device.class" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Api/Device.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Resource/Dev_Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/Resource/Dev_Resource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/target/classes/sk/uniza/WFD_dev/openweathermap/Retrof_client.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +115,7 @@
       <workItem from="1561635983212" duration="5648000" />
       <workItem from="1561660598221" duration="2781000" />
       <workItem from="1561835505673" duration="11916000" />
-      <workItem from="1562074325520" duration="645000" />
+      <workItem from="1562074325520" duration="8253000" />
     </task>
     <servers />
   </component>
@@ -167,16 +157,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/auth/BasicDev_Authentificator.java</url>
           <line>47</line>
           <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/api/Client_data_thread.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sk/fri/uniza/api/Client_data_thread.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
