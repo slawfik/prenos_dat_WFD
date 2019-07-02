@@ -12,7 +12,8 @@
 {"title":"Login","url":"login"},
 {"subheader":"Info","divider":"true"},
 {"title":"User info","icon":"person","url":"persons/user-info"},
-{"title":"Počasie","icon":"person","url":"persons/weather"},
+{"title":"Počasie-Poprad","icon":"filter_vintage","url":"persons/weatherP"},
+{"title":"Počasie-Zilina","icon":"filter_vintage","url":"persons/weatherZ"},
 {"title":"Nový užívateľ","icon":"person_add","url":"persons/new-user","roles":["ADMIN"]},
 {"title":"Zoznam užívateľov","icon":"group","url":"persons","roles":["ADMIN"]},
 

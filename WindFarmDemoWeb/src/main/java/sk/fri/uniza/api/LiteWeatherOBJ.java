@@ -9,11 +9,29 @@ public class LiteWeatherOBJ implements Principal {
     private Integer humidity;
     private Integer all;
     private Double speed;
+    private String time;
+    private String date;
 
     private Long id;
 
     public LiteWeatherOBJ() {
 
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     public Long getId() {

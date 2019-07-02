@@ -5,6 +5,7 @@ import retrofit2.Call;
 import retrofit2.http.*;
 import sk.fri.uniza.api.*;
 
+import javax.ws.rs.QueryParam;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
@@ -28,7 +29,7 @@ public interface WindFarmRequest {
     Call<Person> getPerson(@Header("Authorization") String authorization, @Path("id") Long id);
 
     @GET("/api/authDevice/getWeather")
-    Call<LiteWeatherOBJ> getWeather(@Header("Authorization") String authorization);
+    Call<List<LiteWeatherOBJ>> getWeather(@Header("Authorization") String authorization, @Query("m") String miesto);
 
     @GET("/api/persons")
     Call<Paged<List<Person>>> getPagedPersons(@Header("Authorization") String authorization, @Query("limit") Integer limit, @Query("page") Integer page);

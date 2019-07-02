@@ -14,13 +14,14 @@ public class WeatherView extends MaterializePage<MaterializeHeader, MaterializeF
     private LiteWeatherOBJ Wobj;
     private List<LiteWeatherOBJ> w;
 
-    public WeatherView(UriInfo uriInfo, User loginUser, LiteWeatherOBJ Wobj, String toastMsg) {
+    public WeatherView(UriInfo uriInfo, User loginUser, List<LiteWeatherOBJ> Wobj, String toastMsg) {
         super("weatherr.ftl", uriInfo, new MaterializeHeader(loginUser, "Weather", true), new MaterializeFooter());
         this.loginUser = loginUser;
-        this.Wobj = Wobj;
+        //this.Wobj = Wobj;
         this.toastMsg = toastMsg;
-        w = new ArrayList<LiteWeatherOBJ>();
-        w.add(Wobj);
+        /*w = new ArrayList<LiteWeatherOBJ>();
+        w.add(Wobj);*/
+        this.w = Wobj;
 
     }
 

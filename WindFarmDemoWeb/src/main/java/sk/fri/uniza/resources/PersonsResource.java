@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import retrofit2.Response;
+import retrofit2.http.Query;
 import sk.fri.uniza.WindFarmDemoApplication;
 import sk.fri.uniza.api.LiteWeatherOBJ;
 import sk.fri.uniza.api.Paged;
@@ -98,19 +99,19 @@ public class PersonsResource {
     }
 
     @GET
-    @Path("weather")
+    @Path("weatherP")
     @Produces(MediaType.TEXT_HTML)
     @RolesAllowed({Role.USER_READ_ONLY, Role.ADMIN})
-    public WeatherView getWeather(@Auth User user, @Context UriInfo uriInfo, @Context HttpHeaders headers) {
-
+    public WeatherView getWeatherP(@Auth User user, @Context UriInfo uriInfo, @Context HttpHeaders headers) {
+        String miesto = "Poprad";
+        //System.out.println("_____"+miesto);
         Session session = sessionDao.getSession(headers);
-
-        Response<LiteWeatherOBJ> personResponse;
+        Response<List<LiteWeatherOBJ>> personResponse;
         try {
 
-            personResponse = WindFarmDemoApplication.getWindFarmServis().getWeather(session.getBearerToken()).execute();
+            personResponse = WindFarmDemoApplication.getWindFarmServis().getWeather(session.getBearerToken(),miesto).execute();
             if (personResponse.isSuccessful()) {
-                LiteWeatherOBJ pocasie = personResponse.body();
+                List<LiteWeatherOBJ> pocasie = personResponse.body();
                 return new WeatherView(uriInfo, user, pocasie, null);
             }
             throw new WebApplicationException(personResponse.code());
@@ -120,6 +121,31 @@ public class PersonsResource {
         }
 
     }
+
+    @GET
+    @Path("weatherZ")
+    @Produces(MediaType.TEXT_HTML)
+    @RolesAllowed({Role.USER_READ_ONLY, Role.ADMIN})
+    public WeatherView getWeatherZ(@Auth User user, @Context UriInfo uriInfo, @Context HttpHeaders headers) {
+        String miesto = "Zilina";
+        //System.out.println("_____"+miesto);
+        Session session = sessionDao.getSession(headers);
+        Response<List<LiteWeatherOBJ>> personResponse;
+        try {
+
+            personResponse = WindFarmDemoApplication.getWindFarmServis().getWeather(session.getBearerToken(),miesto).execute();
+            if (personResponse.isSuccessful()) {
+                List<LiteWeatherOBJ> pocasie = personResponse.body();
+                return new WeatherView(uriInfo, user, pocasie, null);
+            }
+            throw new WebApplicationException(personResponse.code());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new WebApplicationException(e);
+        }
+
+    }
+
 
     @GET
     @Path("/user-delete")

@@ -15,6 +15,7 @@ import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("/authDevice")
 @Produces(MediaType.APPLICATION_JSON)
@@ -64,8 +65,8 @@ public class Dev_Resource {
     @Path("/getWeather")
     @UnitOfWork
     @Produces(MediaType.APPLICATION_JSON)
-    public LiteWeatherOBJ select() {
-        LiteWeatherOBJ aa = weather_Dao.findDeviceWithName_DB("Poprad");
+    public List<LiteWeatherOBJ> select(@QueryParam("m") String miesto) {
+        List<LiteWeatherOBJ> aa = weather_Dao.findDeviceWithName_DB(miesto);
         //aa.setName(Device.s_generateHashSecrete(aa.getSalt(),"device123").toString());
         //aa.setLocation(Device.s_generateHashSecrete(aa.getSalt(),"device123").toString());
         return aa;

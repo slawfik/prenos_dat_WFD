@@ -23,12 +23,12 @@ public class LiteWeatherObjDao extends AbstractDAO<LiteWeatherOBJ> implements Ba
         return weather_dao;
     }
 
-    public LiteWeatherOBJ findDeviceWithName_DB(String pa_name) {
+    public List<LiteWeatherOBJ> findDeviceWithName_DB(String pa_name) {
         Query query = super.currentSession().getSession().createQuery("from LiteWeatherOBJ where name = :name ");
         query.setString("name", pa_name);
 
-        List<?> list = query.list();
-        return (LiteWeatherOBJ) list.get(0);
+        List<LiteWeatherOBJ> list = query.list();
+        return list;
     }
 
     @Override

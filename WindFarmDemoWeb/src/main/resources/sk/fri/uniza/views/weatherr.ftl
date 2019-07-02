@@ -6,6 +6,7 @@
             <thead>
             <tr>
                 <th>Miesto</th>
+                <th>Dátum a čas merania</th>
                 <th>Teplota</th>
                 <th>Tlak</th>
                 <th>Vlhkosť</th>
@@ -20,16 +21,22 @@
                         ${wobj.name}
                     </td>
                     <td>
-                        ${wobj.temp}
+                        ${wobj.date} ${wobj.time}
                     </td>
                     <td>
-                        ${wobj.pressure}
+                        ${wobj.temp} °C
+                    </td>
+                    <td>
+                        ${wobj.pressure} hPa
+                    </td>
+                    <td>
+                        ${wobj.humidity}
                     </td>
                     <td>
                         ${wobj.all}
                     </td>
                     <td>
-                        ${wobj.speed}
+                        ${wobj.speed} km/h
                     </td>
                 </tr>
             </#list>

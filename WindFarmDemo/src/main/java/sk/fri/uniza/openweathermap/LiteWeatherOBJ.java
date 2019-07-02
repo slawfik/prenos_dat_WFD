@@ -2,6 +2,8 @@ package sk.fri.uniza.openweathermap;
 
 import javax.persistence.*;
 import java.security.Principal;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name="Weather_Table")
@@ -13,6 +15,9 @@ public class LiteWeatherOBJ implements Principal {
     private Integer all;
     private Double speed;
 
+    private String time;
+    private String date;
+
     private Long id;
 
     public LiteWeatherOBJ() {
@@ -20,7 +25,13 @@ public class LiteWeatherOBJ implements Principal {
     }
 
     public LiteWeatherOBJ(OpenWeatherOBJ obj)   {
-        temp = obj.getMain().getTemp();
+        Date date = new Date();
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat formatTime = new SimpleDateFormat("HH:mm");
+        this.time = formatTime.format(date);
+        this.date = formatDate.format(date);
+
+        temp = obj.getMain().getCelsiusTemp();
         pressure = obj.getMain().getPressure();
         humidity = obj.getMain().getHumidity();
         all = obj.getClouds().getAll();
@@ -46,6 +57,15 @@ public class LiteWeatherOBJ implements Principal {
 
     public Double getTemp() {
         return temp;
+    }
+
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     public Integer getPressure() {
@@ -87,5 +107,13 @@ public class LiteWeatherOBJ implements Principal {
 
     public void setSpeed(Double speed) {
         this.speed = speed;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }
