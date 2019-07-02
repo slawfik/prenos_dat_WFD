@@ -3,16 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="479989db-ba49-49e0-aebf-769c56430bf6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/api/LiteWeatherOBJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/api/LiteWeatherOBJ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/client/WindFarmRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/client/WindFarmRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/resources/PersonsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/resources/PersonsResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/views/WeatherView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/java/sk/fri/uniza/views/WeatherView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/resources/sk/fri/uniza/views/menu_items.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/resources/sk/fri/uniza/views/menu_items.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/resources/sk/fri/uniza/views/weather.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/resources/sk/fri/uniza/views/weatherr.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/src/main/resources/sk/fri/uniza/views/weatherr.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/target/classes/sk/fri/uniza/client/WindFarmRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/target/classes/sk/fri/uniza/client/WindFarmRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/target/classes/sk/fri/uniza/resources/PersonsResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/target/classes/sk/fri/uniza/resources/PersonsResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../WindFarmDemoWeb/target/classes/sk/fri/uniza/views/menu_items.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemoWeb/target/classes/sk/fri/uniza/views/menu_items.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../skunizaWFD_dev/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

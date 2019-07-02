@@ -15,6 +15,7 @@ import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.net.URI;
 import java.util.List;
 
 @Path("/authDevice")
@@ -48,6 +49,13 @@ public class Dev_Resource {
             return Response.status(Response.Status.NOT_FOUND).build();
     }
 
+    @DELETE
+    @UnitOfWork
+    public Response deviceDelete(@QueryParam("id") Integer id) {
+        dao_device.delete(dao_device.getDeviceWithId_DB(id));
+        return Response.temporaryRedirect(URI.create("http://localhost:8080/personsP")).build();
+    }
+
     @GET
     @Path("/addDev")
     @UnitOfWork
@@ -77,8 +85,8 @@ public class Dev_Resource {
     @UnitOfWork
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Device select(@QueryParam("id") Integer _int,@QueryParam("name") String _name) {
-        Device aa = dao_device.findDeviceWithName_DB(_name);
+    public List<Device> select() {
+        List<Device> aa = dao_device.getAll();
         //aa.setName(Device.s_generateHashSecrete(aa.getSalt(),"device123").toString());
         //aa.setLocation(Device.s_generateHashSecrete(aa.getSalt(),"device123").toString());
         return aa;

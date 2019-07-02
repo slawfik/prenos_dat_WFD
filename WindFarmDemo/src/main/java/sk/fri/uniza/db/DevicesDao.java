@@ -29,6 +29,10 @@ public class DevicesDao extends AbstractDAO<Device> implements BasicDao<Device, 
     //########START_LOCAL_DATABASE###########
     static{
         devicesHashMap.put(1, new Device("Tomas","Poprad","device123","localhost:8090/"));
+        devicesHashMap.put(2, new Device("Beagle","Poprad","device123","localhost:8090/"));
+        devicesHashMap.put(3, new Device("Peter","Zilina","device123","localhost:8090/"));
+        devicesHashMap.put(4, new Device("Rudo","Zilina","device123","localhost:8090/"));
+
     }
 
     public List<Device> getArrayL_Devices(){

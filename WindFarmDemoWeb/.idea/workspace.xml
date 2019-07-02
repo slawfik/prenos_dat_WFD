@@ -35,7 +35,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/sk/fri/uniza/views" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -45,8 +45,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="sk.fri.uniza.views" />
       <recent name="sk.fri.uniza.api" />
+      <recent name="sk.fri.uniza.views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/sk/fri/uniza/views" />
@@ -81,6 +81,7 @@
       <workItem from="1562087277113" duration="14000" />
       <workItem from="1562087429390" duration="221000" />
       <workItem from="1562087820257" duration="6762000" />
+      <workItem from="1562106053704" duration="3750000" />
     </task>
     <servers />
   </component>

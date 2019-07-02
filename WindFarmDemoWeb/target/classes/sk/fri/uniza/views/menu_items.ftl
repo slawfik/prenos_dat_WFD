@@ -14,6 +14,7 @@
 {"title":"User info","icon":"person","url":"persons/user-info"},
 {"title":"Počasie-Poprad","icon":"filter_vintage","url":"persons/weatherP"},
 {"title":"Počasie-Zilina","icon":"filter_vintage","url":"persons/weatherZ"},
+{"title":"Zoznam zariadení","icon":"android","url":"persons/selectDevs"},
 {"title":"Nový užívateľ","icon":"person_add","url":"persons/new-user","roles":["ADMIN"]},
 {"title":"Zoznam užívateľov","icon":"group","url":"persons","roles":["ADMIN"]},
 

@@ -3,25 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="622cbf05-95fa-467b-93f3-b78c5b420828" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../WindFarmDemo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/WindFarmDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/WindFarmDemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/api/Client_data_thread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/LiteWeatherObjDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/LiteWeatherObjDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/openweathermap/LiteWeatherOBJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/openweathermap/LiteWeatherOBJ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/resources/Dev_Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/resources/Dev_Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/WindFarmDemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/api/Client_data_thread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/db/LiteWeatherObjDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/db/LiteWeatherObjDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/openweathermap/LiteWeatherOBJ.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/openweathermap/LiteWeatherOBJ.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/resources/Dev_Resource.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/target/classes/sk/fri/uniza/resources/Dev_Resource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sk/uniza/WFD_dev/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sk/uniza/WFD_dev/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/DevicesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/db/DevicesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WindFarmDemo/src/main/java/sk/fri/uniza/resources/Retrofit_client.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,6 +102,7 @@
       <workItem from="1561835258026" duration="14247000" />
       <workItem from="1562074354891" duration="603000" />
       <workItem from="1562075282098" duration="3508000" />
+      <workItem from="1562104374635" duration="1419000" />
     </task>
     <servers />
   </component>

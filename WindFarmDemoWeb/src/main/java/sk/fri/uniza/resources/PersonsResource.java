@@ -8,18 +8,12 @@ import org.slf4j.LoggerFactory;
 import retrofit2.Response;
 import retrofit2.http.Query;
 import sk.fri.uniza.WindFarmDemoApplication;
-import sk.fri.uniza.api.LiteWeatherOBJ;
-import sk.fri.uniza.api.Paged;
-import sk.fri.uniza.api.Person;
-import sk.fri.uniza.api.PersonBuilder;
+import sk.fri.uniza.api.*;
 import sk.fri.uniza.auth.Role;
 import sk.fri.uniza.auth.Session;
 import sk.fri.uniza.auth.Sessions;
 import sk.fri.uniza.core.User;
-import sk.fri.uniza.views.NewPersonView;
-import sk.fri.uniza.views.PersonView;
-import sk.fri.uniza.views.PersonsView;
-import sk.fri.uniza.views.WeatherView;
+import sk.fri.uniza.views.*;
 
 import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
@@ -146,6 +140,50 @@ public class PersonsResource {
 
     }
 
+    @GET
+    @Path("selectDevs")
+    @Produces(MediaType.TEXT_HTML)
+    @RolesAllowed({Role.USER_READ_ONLY, Role.ADMIN})
+    public DevicesView deleteDevice(@Auth User user, @Context UriInfo uriInfo, @Context HttpHeaders headers) {
+
+        Session session = sessionDao.getSession(headers);
+        Response<List<Device>> devResponse;
+        try {
+
+            devResponse = WindFarmDemoApplication.getWindFarmServis().selectDevices(session.getBearerToken()).execute();
+            if (devResponse.isSuccessful()) {
+                List<Device> deviceList = devResponse.body();
+                return new DevicesView(uriInfo, user, deviceList, null);
+            }
+            throw new WebApplicationException(devResponse.code());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new WebApplicationException(e);
+        }
+
+    }
+
+
+    @GET
+    @Path("delete")
+    @RolesAllowed({Role.USER_READ_ONLY, Role.ADMIN})
+    public Response deviceDelete(@Auth User user, @Context UriInfo uriInfo, @Context HttpHeaders headers, @QueryParam("id") Integer id) {
+        Response<?> response;
+        Session session = sessionDao.getSession(headers);
+        try {
+
+            response = WindFarmDemoApplication.getWindFarmServis().delDev(session.getBearerToken(), id).execute();
+            if (response.isSuccessful()) {
+                return  Response.success(response.body());
+                //return javax.ws.rs.core.Response.temporaryRedirect(URI.create("http://localhost:8080/personsP")).build();
+            }
+            throw new WebApplicationException(response.code());
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new WebApplicationException(e);
+        }
+
+    }
 
     @GET
     @Path("/user-delete")

@@ -2,10 +2,10 @@ package sk.fri.uniza.client;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.*;
 import sk.fri.uniza.api.*;
 
-import javax.ws.rs.QueryParam;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executor;
@@ -28,8 +28,14 @@ public interface WindFarmRequest {
     @GET("/api/persons/{id}")
     Call<Person> getPerson(@Header("Authorization") String authorization, @Path("id") Long id);
 
+    @GET("/api/authDevice/selectDev")
+    Call<List<Device>> selectDevices(@Header("Authorization") String authorization);
+
     @GET("/api/authDevice/getWeather")
     Call<List<LiteWeatherOBJ>> getWeather(@Header("Authorization") String authorization, @Query("m") String miesto);
+
+    @DELETE("/api/authDevice")
+    Call<Response> delDev(@Header("Authorization") String authorization, @Query("id") Integer id);
 
     @GET("/api/persons")
     Call<Paged<List<Person>>> getPagedPersons(@Header("Authorization") String authorization, @Query("limit") Integer limit, @Query("page") Integer page);
